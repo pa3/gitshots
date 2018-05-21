@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+
+const time = Date.now();
+const fileName = `~/.git-shots/${time}.jpg`;
+execSync(`fswebcam --no-banner -S 10 -r 1280x720 --jpeg 95 ${fileName}`);
